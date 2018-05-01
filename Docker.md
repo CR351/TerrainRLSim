@@ -51,6 +51,6 @@ docker restart `terrain`
 docker attach `terrain`
 ```
 ### Remove Container
-      
+ ```     
 docker rm `terrain`
-      
+ ```    
