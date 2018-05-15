@@ -1,6 +1,7 @@
 FROM nvidia/cudagl:9.0-runtime-ubuntu16.04
 
-ENV NVIDIA_DRIVER_CAPABILITIES ${NVIDIA_DRIVER_CAPABILITIES},display
+# https://github.com/nvidia/nvidia-container-runtime#nvidia_driver_capabilities
+ENV NVIDIA_DRIVER_CAPABILITIES ${NVIDIA_DRIVER_CAPABILITIES},compute,graphics,utility,display
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
